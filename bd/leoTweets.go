@@ -14,7 +14,7 @@ import (
 func LeoTweets(ID string, pagina int64) ([]*models.DevuelvoTweets, bool) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
-	db := MongoCN.Database("dbtw")
+	db := MongoCN.Database("twittor")
 	col := db.Collection("tweet")
 
 	var resultados []*models.DevuelvoTweets
